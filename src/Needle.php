@@ -15,7 +15,7 @@ class Needle
      * Needle constructor.
      * @param string $needle
      */
-    public function __construct($needle)
+    public function __construct(string $needle)
     {
         $this->needle = $needle;
     }
@@ -23,7 +23,7 @@ class Needle
     /**
      * @return string
      */
-    public function getNeedle()
+    public function getNeedle() : string
     {
         return $this->needle;
     }

@@ -21,7 +21,7 @@ class TextSearch implements TextSearchInterface
      * TextSearchHelper constructor.
      * @inheritDoc
      */
-    public function __construct($text, $min_length = null, $max_freq = null)
+    public function __construct(string $text, ?int $min_length = null, ?int$max_freq = null)
     {
         $this->text = $text;
         $this->adapter = new TextovyNaradi($text, $min_length, $max_freq);
@@ -32,7 +32,7 @@ class TextSearch implements TextSearchInterface
      *
      * @return bool
      */
-    public function search($needle)
+    public function search(Needle $needle) : bool
     {
         return $this->adapter->search($needle->getNeedle());
     }
@@ -40,7 +40,7 @@ class TextSearch implements TextSearchInterface
     /**
      * @return string
      */
-    public function getText()
+    public function getText() : string
     {
         return $this->text;
     }
