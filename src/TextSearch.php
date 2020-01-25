@@ -21,7 +21,7 @@ class TextSearch implements TextSearchInterface
      * TextSearchHelper constructor.
      * @inheritDoc
      */
-    public function __construct(string $text, ?int $min_length = null, ?int$max_freq = null)
+    public function __construct(string $text, ?int $min_length = null, ?float $max_freq = null)
     {
         $this->text = $text;
         $this->adapter = new TextovyNaradi($text, $min_length, $max_freq);
